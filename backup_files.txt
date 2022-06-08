@@ -1,24 +1,5 @@
 ## DHCP 
 
-# config files rpm -qc dhcp
-/etc/dhcp/dhcpd.conf
-/etc/dhcp/dhcpd6.conf
-/etc/openldap/schema/dhcp.schema
-/etc/sysconfig/dhcpd
-/var/lib/dhcpd/dhcpd.leases
-/var/lib/dhcpd/dhcpd6.leases
-
-# Documentation files rpm -qd dhcp
-/usr/share/doc/dhcp-4.2.5/dhcpd.conf.example
-/usr/share/doc/dhcp-4.2.5/dhcpd6.conf.example
-/usr/share/doc/dhcp-4.2.5/ldap/README.ldap
-/usr/share/doc/dhcp-4.2.5/ldap/dhcp.schema
-/usr/share/doc/dhcp-4.2.5/ldap/dhcpd-conf-to-ldap
-/usr/share/man/man1/omshell.1.gz
-/usr/share/man/man5/dhcpd.conf.5.gz
-/usr/share/man/man5/dhcpd.leases.5.gz
-/usr/share/man/man8/dhcpd.8.gz
-/usr/share/man/man8/dhcrelay.8.gz
 
 #rpm -ql dhcp
 /etc/NetworkManager
@@ -54,34 +35,6 @@
 /var/lib/dhcpd/dhcpd6.leases
 -------------------------------------------------------------------
 ## Nginx-http
-
-#config files
-/etc/logrotate.d/nginx
-/etc/nginx/fastcgi.conf
-/etc/nginx/fastcgi.conf.default
-/etc/nginx/fastcgi_params
-/etc/nginx/fastcgi_params.default
-/etc/nginx/koi-utf
-/etc/nginx/koi-win
-/etc/nginx/mime.types
-/etc/nginx/mime.types.default
-/etc/nginx/nginx.conf
-/etc/nginx/nginx.conf.default
-/etc/nginx/scgi_params
-/etc/nginx/scgi_params.default
-/etc/nginx/uwsgi_params
-/etc/nginx/uwsgi_params.default
-/etc/nginx/win-utf
-
-#Documentation files
-/usr/share/doc/nginx-1.20.1/CHANGES
-/usr/share/doc/nginx-1.20.1/README
-/usr/share/doc/nginx-1.20.1/README.dynamic
-/usr/share/doc/nginx-1.20.1/UPGRADE-NOTES-1.6-to-1.10
-/usr/share/man/man3/nginx.3pm.gz
-/usr/share/man/man8/nginx-upgrade.8.gz
-/usr/share/man/man8/nginx.8.gz
-
 
 
 # rpm -ql nginx
@@ -136,7 +89,9 @@
 /var/log/nginx/error.log
 
 -------------------------------------------------
-#tftp-server rpm -ql tftp-server
+##TFTP-server 
+
+#rpm -ql tftp-server
 
 /etc/xinetd.d/tftp
 /usr/lib/systemd/system/tftp.service
@@ -149,4 +104,73 @@
 /usr/share/man/man8/in.tftpd.8.gz
 /usr/share/man/man8/tftpd.8.gz
 /var/lib/tftpboot
+
+-----------------------------------
+## VSFTP
+
+# rpm -ql vsftpd
+/etc/logrotate.d/vsftpd
+/etc/pam.d/vsftpd
+/etc/vsftpd
+/etc/vsftpd/ftpusers
+/etc/vsftpd/user_list
+/etc/vsftpd/vsftpd.conf
+/etc/vsftpd/vsftpd_conf_migrate.sh
+/usr/lib/systemd/system-generators/vsftpd-generator
+/usr/lib/systemd/system/vsftpd.service
+/usr/lib/systemd/system/vsftpd.target
+/usr/lib/systemd/system/vsftpd@.service
+/usr/sbin/vsftpd
+/usr/share/doc/vsftpd-3.0.2
+/usr/share/doc/vsftpd-3.0.2/AUDIT
+/usr/share/doc/vsftpd-3.0.2/BENCHMARKS
+/usr/share/doc/vsftpd-3.0.2/BUGS
+/usr/share/doc/vsftpd-3.0.2/COPYING
+/usr/share/doc/vsftpd-3.0.2/Changelog
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/INTERNET_SITE
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/INTERNET_SITE/README
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/INTERNET_SITE/README.configuration
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/INTERNET_SITE/vsftpd.conf
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/INTERNET_SITE/vsftpd.xinetd
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/INTERNET_SITE_NOINETD
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/INTERNET_SITE_NOINETD/README
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/INTERNET_SITE_NOINETD/README.configuration
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/INTERNET_SITE_NOINETD/vsftpd.conf
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/PER_IP_CONFIG
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/PER_IP_CONFIG/README
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/PER_IP_CONFIG/README.configuration
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/PER_IP_CONFIG/hosts.allow
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/README
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/VIRTUAL_HOSTS
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/VIRTUAL_HOSTS/README
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/VIRTUAL_USERS
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/VIRTUAL_USERS/README
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/VIRTUAL_USERS/README.configuration
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/VIRTUAL_USERS/logins.txt
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/VIRTUAL_USERS/vsftpd.conf
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/VIRTUAL_USERS/vsftpd.pam
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/VIRTUAL_USERS_2
+/usr/share/doc/vsftpd-3.0.2/EXAMPLE/VIRTUAL_USERS_2/README
+/usr/share/doc/vsftpd-3.0.2/FAQ
+/usr/share/doc/vsftpd-3.0.2/INSTALL
+/usr/share/doc/vsftpd-3.0.2/LICENSE
+/usr/share/doc/vsftpd-3.0.2/README
+/usr/share/doc/vsftpd-3.0.2/README.security
+/usr/share/doc/vsftpd-3.0.2/REWARD
+/usr/share/doc/vsftpd-3.0.2/SECURITY
+/usr/share/doc/vsftpd-3.0.2/SECURITY/DESIGN
+/usr/share/doc/vsftpd-3.0.2/SECURITY/IMPLEMENTATION
+/usr/share/doc/vsftpd-3.0.2/SECURITY/OVERVIEW
+/usr/share/doc/vsftpd-3.0.2/SECURITY/TRUST
+/usr/share/doc/vsftpd-3.0.2/SIZE
+/usr/share/doc/vsftpd-3.0.2/SPEED
+/usr/share/doc/vsftpd-3.0.2/TODO
+/usr/share/doc/vsftpd-3.0.2/TUNING
+/usr/share/doc/vsftpd-3.0.2/vsftpd.xinetd
+/usr/share/man/man5/vsftpd.conf.5.gz
+/usr/share/man/man8/vsftpd.8.gz
+/var/ftp
+/var/ftp/pub
+
 

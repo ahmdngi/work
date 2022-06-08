@@ -1,0 +1,21 @@
+--- 
+- hosts:
+    - dhcp
+    - hpc-gateway
+  tasks:
+    - name: Make sure epel is installed
+      yum:
+        name: epel-release
+        state: present
+      become: true
+
+    - name: update software
+      yum:
+        name: '*'
+        state: latest
+        update_cache: true
+      become: true 
+
+    - name: All software
+      include_role:
+        name: dhcp_gw

@@ -33,7 +33,11 @@
 /var/lib/dhcpd/dhcpd.leases
 /var/lib/dhcpd/dhcpd6.leases
 -------------------------------------------------------------------
-### PXE  https://www.linuxtechi.com/configure-pxe-installation-server-centos-7/
+### PXE  
+https://www.linuxtechi.com/configure-pxe-installation-server-centos-7/
+https://docs.openstack.org/ironic/pike/install/configure-pxe.html
+https://www.tecmint.com/install-pxe-network-boot-server-in-centos-7/
+
 
 ##TFTP
 # rpm -ql tftp

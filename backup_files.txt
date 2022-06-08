@@ -134,3 +134,19 @@
 /var/log/nginx
 /var/log/nginx/access.log
 /var/log/nginx/error.log
+
+-------------------------------------------------
+#tftp-server rpm -ql tftp-server
+
+/etc/xinetd.d/tftp
+/usr/lib/systemd/system/tftp.service
+/usr/lib/systemd/system/tftp.socket
+/usr/sbin/in.tftpd
+/usr/share/doc/tftp-server-5.2
+/usr/share/doc/tftp-server-5.2/CHANGES
+/usr/share/doc/tftp-server-5.2/README
+/usr/share/doc/tftp-server-5.2/README.security
+/usr/share/man/man8/in.tftpd.8.gz
+/usr/share/man/man8/tftpd.8.gz
+/var/lib/tftpboot
+

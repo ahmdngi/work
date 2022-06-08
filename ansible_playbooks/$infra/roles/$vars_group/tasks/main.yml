@@ -1,0 +1,12 @@
+- name:
+  yum:
+    name:
+      - htop
+      - nano
+      - vim
+      - rdiff-backup
+    state: latest
+  become: true
+  tags:
+    - software_all
+

@@ -1,1 +1,21 @@
+## DHCP 
+# config files rpm -qc dhcp
+/etc/dhcp/dhcpd.conf
+/etc/dhcp/dhcpd6.conf
+/etc/openldap/schema/dhcp.schema
+/etc/sysconfig/dhcpd
+/var/lib/dhcpd/dhcpd.leases
+/var/lib/dhcpd/dhcpd6.leases
+
+# Documentation files rpm -qd dhcp
+/usr/share/doc/dhcp-4.2.5/dhcpd.conf.example
+/usr/share/doc/dhcp-4.2.5/dhcpd6.conf.example
+/usr/share/doc/dhcp-4.2.5/ldap/README.ldap
+/usr/share/doc/dhcp-4.2.5/ldap/dhcp.schema
+/usr/share/doc/dhcp-4.2.5/ldap/dhcpd-conf-to-ldap
+/usr/share/man/man1/omshell.1.gz
+/usr/share/man/man5/dhcpd.conf.5.gz
+/usr/share/man/man5/dhcpd.leases.5.gz
+/usr/share/man/man8/dhcpd.8.gz
+/usr/share/man/man8/dhcrelay.8.gz
 

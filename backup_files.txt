@@ -1,3 +1,10 @@
+Gateway
+GW: /root/network-scripts-backup
+
+
+--------------------------------------
+DHCP 
+
 ## DHCP 
 
 #rpm -ql dhcp

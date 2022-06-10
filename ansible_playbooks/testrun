@@ -1,0 +1,8 @@
+#test-playbook
+- hosts: overhaul
+ 
+  tasks:
+   - name: ensure a directory exists
+     file:
+        path: /home/centos/test_file         
+        state: directory

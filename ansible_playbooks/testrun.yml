@@ -1,5 +1,5 @@
 #test-playbook
-- hosts: overhaul
+- hosts: training-compute2
  
   tasks:
    - name: ensure a directory exists

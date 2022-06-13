@@ -1,5 +1,5 @@
 #test-playbook
-- hosts: proto1
+- hosts: overhaul
  
   tasks:
    - name: ensure a directory exists

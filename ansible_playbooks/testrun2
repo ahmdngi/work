@@ -1,0 +1,8 @@
+
+- hosts: hpc2
+ 
+  tasks:
+   - name: delete a directory 
+     file:
+        path: /home/centos/test_file         
+        state: absent

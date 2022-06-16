@@ -19,9 +19,9 @@
     - name: Ensure machine is powered on
       ipmi_power:
         state: on
-        #name: test.testdomain.com
-        #user: admin
-        #password: password
+        name: test.testdomain.com
+        user: name
+        password: password
        
 
 - hosts: reachable

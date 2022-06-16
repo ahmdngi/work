@@ -35,6 +35,6 @@
         path: /home/centos/test_file         
         state: directory
    - name: list reachable hosts
-     debug: Reachable 
+     debug: reachable 
    
 

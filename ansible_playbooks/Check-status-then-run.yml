@@ -1,0 +1,24 @@
+- hosts: hpc2
+  tasks:
+    - block:
+        - name: determine hosts that are up
+          wait_for:
+            host: "{{ ansible_host }}"
+            port: 22
+            timeout: 4
+        - name: add reachable hosts to "reachable" group
+          group_by:
+            key: "reachable"
+      rescue:
+        - name: add unreachable hosts to "unreachable" group
+          group_by:
+            key: "unreachable"
+
+- hosts: reachable
+  ignore_unreachable: yes
+ 
+  tasks:
+   - name: ensure a directory exists
+     file:
+        path: /home/centos/test_file         
+        state: directory

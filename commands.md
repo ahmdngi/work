@@ -1,4 +1,3 @@
-
 * `find / -iname "shim.efi"` >> this will search the entire machine for the file and give the location of needed file
 
 - `rpm -ql syslinux` >> gets all the files related to this package
@@ -13,3 +12,11 @@
 5. `git add .` > to add the current directory from local to git
 6. `git status` to check for changes
 7. `git diff` origin/master to see changes 
+
+
+
+
+#### Ansible Links
+- .gitlab-ci.yml keyword reference >> https://docs.gitlab.com/ee/ci/yaml/
+
+- Ansible Modules >>  https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html#plugins-in-ansible-builtin

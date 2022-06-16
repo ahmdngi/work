@@ -13,9 +13,15 @@
         - name: add unreachable hosts to "unreachable" group
           group_by:
             key: "unreachable"
-        - name: message
-          debug: 
-              msg: unreachable
+
+- hosts: unreachable
+  tasks:
+   - name: Ensure machine is powered on
+     community.general.ipmi_power:
+        #name: test.testdomain.com
+        #user: admin
+        #password: password
+        state: on
 
 - hosts: reachable
   ignore_unreachable: yes
@@ -25,5 +31,7 @@
      file:
         path: /home/centos/test_file         
         state: directory
+   - name: list reachable hosts
+     debug: Reachable 
    
 

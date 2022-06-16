@@ -13,6 +13,8 @@
         - name: add unreachable hosts to "unreachable" group
           group_by:
             key: "unreachable"
+          debug: 
+             msg: unreachable
 
 - hosts: reachable
   ignore_unreachable: yes
@@ -22,7 +24,5 @@
      file:
         path: /home/centos/test_file         
         state: directory
-   - name: list of unreachble hosts
-     debug:
-        msg: System "reachable"
+   
 

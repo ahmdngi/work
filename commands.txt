@@ -1,7 +1,0 @@
-find / -iname "shim.efi"
-this will search the entire machine for the file and give the location of needed file
-
-rpm -ql syslinux
-gets all the files related to this package
-
-test

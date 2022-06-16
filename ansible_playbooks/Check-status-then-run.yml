@@ -16,8 +16,7 @@
 
 - hosts: unreachable
   tasks:
-    - name: Ensure machine is powered on
-      ipmi_power:
+    - ipmi_power:
         state: on
         name: test.testdomain.com
         user: name

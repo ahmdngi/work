@@ -9,17 +9,22 @@
         - name: add reachable hosts to "reachable" group
           group_by:
             key: "reachable"
-        - name: Ensure machine is powered on 
-          ipmi_power:
-           state: on
-           name: test.testdomain.com
-           user: name
-           password: password
 
       rescue:
         - name: add unreachable hosts to "unreachable" group
           group_by:
             key: "unreachable"
+
+
+#- hosts: unreachable
+#  tasks:
+#    - name: Ensure machine is powered on
+#      ipmi_power:
+#        state: on
+        #name: test.testdomain.com
+        #user: admin
+        #password: password
+
      
 
 - hosts: reachable

@@ -20,3 +20,8 @@
 - .gitlab-ci.yml keyword reference >> https://docs.gitlab.com/ee/ci/yaml/
 
 - Ansible Modules >>  https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html#plugins-in-ansible-builtin
+
+---------------------------------------------------
+ - https://docs.ansible.com/ansible/latest/collections/community/general/ipmi_power_module.html
+ - https://docs.ansible.com/ansible/latest/collections/community/general/wakeonlan_module.html
+ - https://docs.ansible.com/ansible/latest/collections/ansible/builtin/wait_for_connection_module.html#wait-for-connection-waits-until-remote-system-is-reachable-usable

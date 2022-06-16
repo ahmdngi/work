@@ -13,8 +13,9 @@
         - name: add unreachable hosts to "unreachable" group
           group_by:
             key: "unreachable"
+        - name: message
           debug: 
-             msg: unreachable
+              msg: unreachable
 
 - hosts: reachable
   ignore_unreachable: yes

@@ -2,6 +2,9 @@
 
 - `rpm -ql syslinux` >> gets all the files related to this package
 
+- `grep -R wakeup *` >>> runs a search in the current directory in all the folders and files
+
+
 
 #### Git commands
 1. `git fetch` to get the latest updates from remote
@@ -12,6 +15,11 @@
 5. `git add .` > to add the current directory from local to git
 6. `git status` to check for changes
 7. `git diff` origin/master to see changes 
+
+-------------------------------------------
+slurm:
+1. enter interactive session  `srun --partition=gray-ib -t 05:00:00 --pty bash`
+
 
 
 

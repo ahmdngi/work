@@ -1,11 +1,11 @@
 
 
 
-
 ----------------------------------------------
 ###### token
 
 
+```
 HTTP 201 Created
 Allow: GET, POST, HEAD, OPTIONS
 Content-Type: application/json
@@ -44,3 +44,4 @@ X-API-Time: 0.067s
     "expires": "3021-10-21T13:00:15.865046Z",
     "scope": "write"
 }
+```

@@ -1,6 +1,11 @@
 
 
-
+https://medium.com/@claudio.domingos/ansible-awx-from-scratch-to-rest-api-part-3-of-8-3adcf539031f
+https://docs.ansible.com/ansible-tower/latest/html/towerapi/api_ref.html#/Authentication/Authentication_tokens_create_0
+https://github.com/ansible/awx/issues/3599
+https://docs.ansible.com/ansible-tower/latest/html/administration/oauth2_token_auth.html#application-using-password-grant-type
+https://docs.ansible.com/ansible-tower/latest/html/administration/oauth2_token_auth.html#ag-use-oauth-pat
+https://stackoverflow.com/questions/3044315/how-to-set-the-authorization-header-using-curl
 ----------------------------------------------
 ###### token
 

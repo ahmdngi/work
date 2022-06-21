@@ -79,5 +79,4 @@ User centos
 ##### Ref:
  * https://techviewleo.com/ansible-check-if-software-package-is-installed/
  * https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html#plugins-in-ansible-builtin
- * 
  * https://rakeshjain-devops.medium.com/how-to-install-python-3-on-centos-7-7-using-yum-and-source-and-set-as-default-1dee13396f7

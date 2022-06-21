@@ -20,6 +20,7 @@
 ##### Notes:
 1. to ssh jump > `ssh -J centos@training.hpc.taltech.ee centos@192.168.42.33` 
 2. add config file to .ssh/ for easier navigation
+3. change python interpreter to python2 `ansible-playbook -e ansible_python_interpreter=/usr/bin/python2`
 ```
 #first option for the proxy jump is to define them and then use it in under the proxy jump parameter
 Host gw gateway
@@ -76,5 +77,7 @@ User centos
  
 --------------------------------------------------
 ##### Ref:
- https://techviewleo.com/ansible-check-if-software-package-is-installed/
- https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html#plugins-in-ansible-builtin
+ * https://techviewleo.com/ansible-check-if-software-package-is-installed/
+ * https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html#plugins-in-ansible-builtin
+ * 
+ * https://rakeshjain-devops.medium.com/how-to-install-python-3-on-centos-7-7-using-yum-and-source-and-set-as-default-1dee13396f7

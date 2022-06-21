@@ -1,4 +1,4 @@
-#### The awx-manage Utility: 
+### The awx-manage Utility: 
 can be used for several operations (new tokens) read about it [HERE](urlhttps://docs.ansible.com/ansible-tower/latest/html/administration/tower-manage.html#id1)
 
 To add **multiple hosts** [HERE](https://www.unixarena.com/2018/12/awx-ansible-tower-inventory-bulk-hosts-import.html/#:~:text=Add%20Multiple%20hosts%20in%20AWX,ansible%20clients%20in%20few%20minutes)
@@ -30,22 +30,20 @@ To add **multiple hosts** [HERE](https://www.unixarena.com/2018/12/awx-ansible-t
 * first we will generate a token (oAuth2) for a user then we will recall this token in the script as the Authentication method 
 
 
-###### 1. generate the token
+###### 1. Token Generation:
 to generate the token and other API options: [HERE](https://docs.ansible.com/ansible-tower/latest/html/towerapi/api_ref.html#/Authentication/Authentication_tokens_create_0) 
 
 1. go to https://193.40.156.72:8043/api/v2/tokens/
 2. use POST button below and you will get the response below with the token >>> save it 
 
-
-##### 2. bash script
+###### 2. Bash Script: 
 * make a new bash file 
 * add the following command: 
    - `curl -H "Authorization: Bearer MGIFfJff9TZNXVQd2xRXg7RqvW47nv" -H "Content-Type: application/json" -k -X POST https://193.40.156.72:8043/api/v2/job_templates/10/launch/`
 
 * syntax [HERE](https://docs.ansible.com/ansible-tower/latest/html/administration/oauth2_token_auth.html#ag-use-oauth-pat)
 
-
-##### 3. WakeUp Trigger
+###### 3. WakeUp Trigger:
 
 we will create a new service on wakeup which will run the script to activate the job_templates
 
@@ -81,5 +79,4 @@ WantedBy=default.target
 ###### Ref 
 
 * [GTK](https://medium.com/@claudio.domingos/ansible-awx-from-scratch-to-rest-api-part-3-of-8-3adcf539031f)
-
 * [to use username and password as Authentication](https://stackoverflow.com/questions/3044315/how-to-set-the-authorization-header-using-curl)

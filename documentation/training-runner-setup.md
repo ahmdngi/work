@@ -1,4 +1,4 @@
-# Setting Up New Runner for Training Repo:
+### Setting Up New Runner for Training Repo:
 ##### Please note the following:
 * Docker already setup and being used in the Runner machine 
 * multi runners is being used ,meaning that several runners are installed in the same docker container (fbbaecc8a625).

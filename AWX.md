@@ -1,9 +1,12 @@
-##### AWX Managment:
+#### The awx-manage Utility: 
+can be used for several operations (new tokens) read about it [HERE](urlhttps://docs.ansible.com/ansible-tower/latest/html/administration/tower-manage.html#id1)
+
+To add **multiple hosts** [HERE](https://www.unixarena.com/2018/12/awx-ansible-tower-inventory-bulk-hosts-import.html/#:~:text=Add%20Multiple%20hosts%20in%20AWX,ansible%20clients%20in%20few%20minutes)
+
 * run `docker ps` > check the awx machine which is `bd9eda4fb191`
 * run `docker exec -t -i bd9eda4fb191 bash`
-* run `awx-manage --version`  <details><summary>Click to expand</summary>
-https://docs.ansible.com/ansible-tower/latest/html/administration/tower-manage.html#id1
- </details>
+* run `awx-manage --version`  
+    
 * `vim hosts_add` and add all the hosts u want 
       <details><summary>Click to expand</summary>
     #just add all the ip u want
@@ -21,79 +24,62 @@ https://docs.ansible.com/ansible-tower/latest/html/administration/tower-manage.h
 * run  `awx-manage inventory_import --inventory-name Linux_UA_Hosts --source hosts_add`
 
 
----------------------
-##### Notes:
-* you can make new tokens via axw-manage as well 
-##### ref
-* https://www.unixarena.com/2018/12/awx-ansible-tower-inventory-bulk-hosts-import.html/
--------------------------------------------------------------------
-
-
-
-
-
-
-* https://medium.com/@claudio.domingos/ansible-awx-from-scratch-to-rest-api-part-3-of-8-3adcf539031f
-* 
-* https://github.com/ansible/awx/issues/3599
-* https://docs.ansible.com/ansible-tower/latest/html/administration/oauth2_token_auth.html#application-using-password-grant-type
-* https://docs.ansible.com/ansible-tower/latest/html/administration/oauth2_token_auth.html#ag-use-oauth-pat
-* https://stackoverflow.com/questions/3044315/how-to-set-the-authorization-header-using-curl
-----------------------------------------------
-##### AWX Trigger
+---
+### AWX Trigger
 * since we don't have an embedded trigger like GitLab we will rely on the API commands to execute the jobs via bash script
 * first we will generate a token (oAuth2) for a user then we will recall this token in the script as the Authentication method 
 
 
+###### 1. generate the token
+to generate the token and other API options: [HERE](https://docs.ansible.com/ansible-tower/latest/html/towerapi/api_ref.html#/Authentication/Authentication_tokens_create_0) 
+
+1. go to https://193.40.156.72:8043/api/v2/tokens/
+2. use POST button below and you will get the response below with the token >>> save it 
 
 
-
-
-###### token
-to generate the token: <details><summary>ref</summary>
-https://docs.ansible.com/ansible-tower/latest/html/towerapi/api_ref.html#/Authentication/Authentication_tokens_create_0
-</details>
-
-
-
-```
-HTTP 201 Created
-Allow: GET, POST, HEAD, OPTIONS
-Content-Type: application/json
-Location: /api/v2/tokens/1/
-Vary: Accept
-X-API-Node: awx_1
-X-API-Product-Name: AWX
-X-API-Product-Version: 20.0.2.dev0+g4c9d028a35.d20220317
-X-API-Query-Count: 7
-X-API-Query-Time: 0.030s
-X-API-Time: 0.067s
-
-{
-    "id": 1,
-    "type": "o_auth2_access_token",
-    "url": "/api/v2/tokens/1/",
-    "related": {
-        "user": "/api/v2/users/4/",
-        "activity_stream": "/api/v2/tokens/1/activity_stream/"
-    },
-    "summary_fields": {curl -H "Authorization: Bearer MGIFfJff9TZNXVQd2xRXg7RqvW47nv" -H "Content-Type: application/json" -k -X POST https://193.40.156.72:8043/api/v2/job_templates/10/launch/
-    },
-    "created": "2022-06-20T13:00:15.867772Z",
-    "modified": "2022-06-20T13:00:15.875140Z",
-    "description": "",
-    "user": 4,
-    "token": "MGIFfJff9TZNXVQd2xRXg7RqvW47nv",
-    "refresh_token": null,
-    "application": null,
-    "expires": "3021-10-21T13:00:15.865046Z",
-    "scope": "write"
-}
-```
-
-
-##### bash script
+##### 2. bash script
 * make a new bash file 
-* add the following command: <details><summary>Click to expand</summary>
-`curl -H "Authorization: Bearer MGIFfJff9TZNXVQd2xRXg7RqvW47nv" -H "Content-Type: application/json" -k -X POST https://193.40.156.72:8043/api/v2/job_templates/10/launch/`
-</details>
+* add the following command: 
+   - `curl -H "Authorization: Bearer MGIFfJff9TZNXVQd2xRXg7RqvW47nv" -H "Content-Type: application/json" -k -X POST https://193.40.156.72:8043/api/v2/job_templates/10/launch/`
+
+* syntax [HERE](https://docs.ansible.com/ansible-tower/latest/html/administration/oauth2_token_auth.html#ag-use-oauth-pat)
+
+
+##### 3. WakeUp Trigger
+
+we will create a new service on wakeup which will run the script to activate the job_templates
+
+1. `cd /etc/slurm/scripts/` on the trageted node
+
+2. `touch wakeup.sh` then write and keep in mind the job reference number (in this case > 10):
+
+    `curl -H "Authorization: Bearer MGIFfJff9TZNXVQd2xRXg7RqvW47nv" -H "Content-Type: application/json" -k -X POST https://193.40.156.72:8043/api/v2/job_templates/10/launch/`
+
+    
+3. `cd /etc/systemd/system`
+
+4. `touch wakeup.service` and then write
+
+```
+[Unit]
+Description=Wakeup script for triggering update pipeline
+After=network.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /etc/slurm/scripts/wakeup.sh
+
+[Install]
+WantedBy=default.target
+```
+5. `cd /etc/systemd/system/default.target.wants`
+
+6. create or copy wakeup.service with the same syntax
+
+-----------------------------
+###### Ref 
+
+* [GTK](https://medium.com/@claudio.domingos/ansible-awx-from-scratch-to-rest-api-part-3-of-8-3adcf539031f)
+
+* [to use username and password as Authentication](https://stackoverflow.com/questions/3044315/how-to-set-the-authorization-header-using-curl)

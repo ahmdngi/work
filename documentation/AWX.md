@@ -1,7 +1,7 @@
 ### installation and Upgrade Guide
 
-installation: [HERE](https://github.com/ansible/awx/blob/devel/tools/docker-compose/README.md)
-Upgrade: 
+[HERE](https://github.com/ansible/awx/blob/devel/tools/docker-compose/README.md)
+
 
 ### The awx-manage Utility: 
 can be used for several operations (new tokens) read about it [HERE](urlhttps://docs.ansible.com/ansible-tower/latest/html/administration/tower-manage.html#id1)

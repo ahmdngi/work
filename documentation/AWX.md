@@ -39,7 +39,8 @@ to generate the token and other API options: [HERE](https://docs.ansible.com/ans
 ###### 2. Bash Script: 
 * make a new bash file 
 * add the following command: 
-   - `curl -H "Authorization: Bearer MGIFfJff9TZNXVQd2xRXg7RqvW47nv" -H "Content-Type: application/json" -k -X POST https://193.40.156.72:8043/api/v2/job_templates/10/launch/`
+   - `#!/bin/bash 
+    curl -H "Authorization: Bearer MGIFfJff9TZNXVQd2xRXg7RqvW47nv" -H "Content-Type: application/json" -k -X POST https://193.40.156.72:8043/api/v2/job_templates/10/launch/`
 
 * syntax [HERE](https://docs.ansible.com/ansible-tower/latest/html/administration/oauth2_token_auth.html#ag-use-oauth-pat)
 

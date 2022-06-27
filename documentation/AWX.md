@@ -1,3 +1,8 @@
+### installation and Upgrade Guide
+
+installation: [HERE](https://github.com/ansible/awx/blob/devel/tools/docker-compose/README.md)
+Upgrade: 
+
 ### The awx-manage Utility: 
 can be used for several operations (new tokens) read about it [HERE](urlhttps://docs.ansible.com/ansible-tower/latest/html/administration/tower-manage.html#id1)
 
@@ -70,11 +75,12 @@ Type=oneshot
 ExecStart=/bin/bash /etc/slurm/scripts/wakeup.sh
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
 ```
-5. `cd /etc/systemd/system/default.target.wants`
+5. - `sudo systemctl daemon-reload`
+   - `sudo systemctl enable wakeup-service`
 
-6. create or copy wakeup.service with the same syntax
+
 
 -----------------------------
 ###### Ref 

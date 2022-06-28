@@ -1,8 +1,23 @@
-### installation and Upgrade Guide
+### installation Guide
 
 [HERE](https://github.com/ansible/awx/blob/devel/tools/docker-compose/README.md)
 
 
+### Upgrade Guide:
+- install/Upgrade awxkit > `pip3 install awxkit`
+- add credentials > 
+    - `export TOWER_HOST=https://193.40.156.72:8043`     
+    - `export TOWER_USERNAME=ahnasr`
+    - `export TOWER_PASSWORD=ahnasr`
+    - you also add token > `export TOWER_OAUTH_TOKEN=MGIFfJff9TZNXVQd2xRXg7RqvW47nv`
+    - more on Authentication [HERE](https://docs.ansible.com/ansible-tower/latest/html/towercli/authentication.html#authentication)
+- Check data by `awx config`
+- export all to a json file assets.json `awx export > assets.json`
+
+        
+
+
+--------
 ### The awx-manage Utility: 
 can be used for several operations (new tokens) read about it [HERE](urlhttps://docs.ansible.com/ansible-tower/latest/html/administration/tower-manage.html#id1)
 
@@ -80,6 +95,7 @@ WantedBy=multi-user.target
 5. - `sudo systemctl daemon-reload`
    - `sudo systemctl enable wakeup-service`
    - [Ref](https://unix.stackexchange.com/questions/57852/how-do-i-start-a-cron-job-1-min-after-reboot)
+
 
 
 -----------------------------

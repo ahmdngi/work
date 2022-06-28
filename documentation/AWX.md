@@ -9,7 +9,7 @@
     - `export TOWER_HOST=https://193.40.156.72:8043`     
     - `export TOWER_USERNAME=ahnasr`
     - `export TOWER_PASSWORD=ahnasr`
-    - you also add token > `export TOWER_OAUTH_TOKEN=MGIFfJff9TZNXVQd2xRXg7RqvW47nv`
+    - you also add token > `export TOWER_OAUTH_TOKEN=H0g2eQ7GnzTP0ZPubwymqiAjSfzn0I`
     - more on Authentication [HERE](https://docs.ansible.com/ansible-tower/latest/html/towercli/authentication.html#authentication)
 - Check data by `awx config`
 - export all to a json file assets.json `awx export > assets.json`

@@ -26,7 +26,7 @@
 - **UI:** go inside awx1 container `docker exec -it tools_awx_1` and run `make clean-ui ui-devel`
 - inside awx1 run `TARGET='https://awx.local:8043' npm --prefix awx/ui start`
 - for UI Guide [HERE](https://github.com/ansible/awx/blob/devel/tools/docker-compose/README.md)
-
+- run `awx import -k < assets.json`
         
 
 

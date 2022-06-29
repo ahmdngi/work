@@ -4,6 +4,9 @@
 
 
 ### Upgrade Guide:
+- we will use awx CLI Guide [HERE](https://docs.ansible.com/ansible-tower/latest/html/towercli/examples.html)
+- check version `awx --version` 
+- upgrade docker-compose `pip install docker-compose`
 - install/Upgrade awxkit > `pip3 install awxkit`
 - add credentials > 
     - `export TOWER_HOST=https://193.40.156.72:8043`     
@@ -13,6 +16,16 @@
     - more on Authentication [HERE](https://docs.ansible.com/ansible-tower/latest/html/towercli/authentication.html#authentication)
 - Check data by `awx config`
 - export all to a json file assets.json `awx export > assets.json`
+- stop all the current docker containers `docker stop $(docker ps -q)` (if u want to start `docker start $(docker ps -n 6 -q)`)
+- remove all containers and images `docker image rm -f ***imagename***`
+- remove tmp file `rm -rf /tmp/awx*`
+- make new folder for awx installation `mkdir new_awx`
+- run command `git clone https://github.com/ansible/awx.git`
+- go inside awx folder `make docker-compose-build`
+- run command `make docker-compose`
+- **UI:** go inside awx1 container `docker exec -it tools_awx_1` and run `make clean-ui ui-devel`
+- inside awx1 run `TARGET='https://awx.local:8043' npm --prefix awx/ui start`
+- for UI Guide [HERE](https://github.com/ansible/awx/blob/devel/tools/docker-compose/README.md)
 
         
 
@@ -101,5 +114,17 @@ WantedBy=multi-user.target
 -----------------------------
 ###### Ref 
 
-* [GTK](https://medium.com/@claudio.domingos/ansible-awx-from-scratch-to-rest-api-part-3-of-8-3adcf539031f)
-* [to use username and password as Authentication](https://stackoverflow.com/questions/3044315/how-to-set-the-authorization-header-using-curl)
+* How API works [HERE](https://medium.com/@claudio.domingos/ansible-awx-from-scratch-to-rest-api-part-3-of-8-3adcf539031f)
+* to use username and password as Authentication for triggers [HERE](https://stackoverflow.com/questions/3044315/how-to-set-the-authorization-header-using-curl)
+
+* we will use awx CLI Guide [HERE](https://docs.ansible.com/ansible-tower/latest/html/towercli/examples.html)
+
+* awx CLI reference [Here](https://docs.ansible.com/ansible-tower/latest/html/towercli/reference.html#awx-export)
+
+*  more on Authentication [HERE](https://docs.ansible.com/ansible-tower/latest/html/towercli/authentication.html#authentication)
+* for UI Guide [HERE](https://github.com/ansible/awx/blob/devel/tools/docker-compose/README.md)
+* can be used for several operations (new tokens) read about it [HERE](https://docs.ansible.com/ansible-tower/latest/html/administration/tower-manage.html#id1)
+
+* To add **multiple hosts** [HERE](https://www.unixarena.com/2018/12/awx-ansible-tower-inventory-bulk-hosts-import.html/#:~:text=Add%20Multiple%20hosts%20in%20AWX,ansible%20clients%20in%20few%20minutes)
+
+* to generate the token and other API options: [HERE](https://docs.ansible.com/ansible-tower/latest/html/towerapi/api_ref.html#/Authentication/Authentication_tokens_create_0) 

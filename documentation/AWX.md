@@ -2,6 +2,7 @@
 
 [HERE](https://github.com/ansible/awx/blob/devel/tools/docker-compose/README.md)
 
+k8s: https://gist.github.com/dmccuk/93db22e9b30d1963b8fca0de96fc82f0
 
 ### Upgrade Guide:
 - we will use awx CLI Guide [HERE](https://docs.ansible.com/ansible-tower/latest/html/towercli/examples.html)

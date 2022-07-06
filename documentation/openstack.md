@@ -1,6 +1,5 @@
 
 
-
 Openstack Diagram
 - Presentation [HERE](https://slideplayer.com/slide/16571787/)
 - Redhat Openstack Platform RHOSP
@@ -43,7 +42,7 @@ An OpenStack deployment contains a number of components providing APIs to access
 |MURANO|Application Catalog
 |SOLUM|Software Development Lifecycle Automation
 |FREEZER|Backup, Restore, and Disaster Recovery
-|**API Proxies**|
+|**API Proxies**|https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/pdf/product_guide/red_hat_openstack_platform-13-product_guide-en-us.pdf
 |EC2API|EC2 API proxy|
 |**Web frontends**|
 |HORIZON|Dashboard|
@@ -67,5 +66,6 @@ An OpenStack deployment contains a number of components providing APIs to access
 |TEMPEST|The OpenStack Integration Test Suite
 |PATROLE|The OpenStack RBAC Integration Test Suite
 
-- [Services PDF](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/16.2/pdf/product_guide/red_hat_openstack_platform-16.2-product_guide-en-us.pdf)
+- [Services PDF OS 16.2](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/16.2/pdf/product_guide/red_hat_openstack_platform-16.2-product_guide-en-us.pdf)
+- [OS 13](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/pdf/product_guide/red_hat_openstack_platform-13-product_guide-en-us.pdf)
 - [Openstack.org](https://www.openstack.org/software/project-navigator/openstack-components#openstack-services)

@@ -13,7 +13,7 @@ An OpenStack deployment contains a number of components providing APIs to access
 **Openstack Components**
 
 |**OpenStack Services**| An OpenStack deployment contains a number of components providing APIs to access infrastructure resources. This page lists the various services that can be deployed to provide such resources to cloud end users.||
-|---|---||
+|---|---|---|
 |**Compute**| ||
 |NOVA| Compute Service |Core|
 |ZUN|Containers Service|
@@ -56,10 +56,10 @@ An OpenStack deployment contains a number of components providing APIs to access
 |SKYLINE|Next generation dashboard (tech preview)|
 
 
-|**Operations Tooling**|Those services deliver APIs primarily targeted to cloud admins and deployers, to help with cloud operations.|
-|---|---|
-|**Monitoring services**||
-|CEILOMETER|Metering & Data Collection Service
+|**Operations Tooling**|Those services deliver APIs primarily targeted to cloud admins and deployers, to help with cloud operations.||
+|---|---| --- |
+|**Monitoring services**|||
+|CEILOMETER|Metering & Data Collection Service|Core|
 |PANKO|Event, Metadata Indexing Service
 |MONASCA|Monitoring
 |**Resource optimization**|

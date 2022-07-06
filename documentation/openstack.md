@@ -34,7 +34,15 @@ An OpenStack deployment contains a number of components providing APIs to access
 |GLANCE|Image service
 |BARBICAN|Key management
 |**Orchestration**
-|HEAT|Orchestration||----------|--------|-------|Framework Provisioning|
+|HEAT|Orchestration|Core|
+|SENLIN|Clustering service
+|MISTRAL|Workflow service
+|ZAQAR|Messaging Service
+|BLAZAR|Resource reservation service
+|AODH|Alarming Service
+|**Workload Provisioning**|
+|MAGNUM|Container Orchestration Engine Provisioning
+|SAHARA|Big Data Processing Framework Provisioning
 |TROVE|Database as a Service|
 |**Application Lifecycle**|
 |MASAKARI|Instances High Availability Service

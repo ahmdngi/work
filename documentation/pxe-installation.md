@@ -1,4 +1,5 @@
-
+### How to install PXE server (Preboot eXecution Environment)
+----
 #### PXE 
  https://www.linuxtechi.com/configure-pxe-installation-server-centos-7/
 - this works with syslinux then copies to tftpboot file

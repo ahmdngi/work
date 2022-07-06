@@ -6,7 +6,6 @@ Openstack Diagram
 
 
 
-
 **OpenStack Services:** 
 An OpenStack deployment contains a number of components providing APIs to access infrastructure resources. This page lists the various services that can be deployed to provide such resources to cloud end users.
 

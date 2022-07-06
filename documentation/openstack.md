@@ -1,10 +1,10 @@
 
-
 Openstack Diagram
 - Presentation [HERE](https://slideplayer.com/slide/16571787/)
 - Redhat Openstack Platform RHOSP
 
 ![](https://docs.openstack.org/arch-design/_images/osog_0001.png)
+
 
 
 

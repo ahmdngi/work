@@ -12,27 +12,27 @@ An OpenStack deployment contains a number of components providing APIs to access
 
 **Openstack Components**
 
-|**OpenStack Services**| An OpenStack deployment contains a number of components providing APIs to access infrastructure resources. This page lists the various services that can be deployed to provide such resources to cloud end users.|
-|---|---|
-|**Compute**| |
-|NOVA| Compute Service |
+|**OpenStack Services**| An OpenStack deployment contains a number of components providing APIs to access infrastructure resources. This page lists the various services that can be deployed to provide such resources to cloud end users.||
+|---|---||
+|**Compute**| ||
+|NOVA| Compute Service |Core|
 |ZUN|Containers Service|
 |**Hardware Lifecycle**|
 |IRONIC| Bare Metal Provisioning Service|
 |CYBORG| Lifecycle management of accelerators|
 |**Storage**|
-|SWIFT|Object store|
+|SWIFT|Object store|Core|
 |CINDER|Block Storage|
 |MANILA|Shared filesystems|
 |**Networking**|
-|NEUTRON|Networking
+|NEUTRON|Networking|Core|
 |OCTAVIA|Load balancer
 |DESIGNATE|DNS service
 |**Shared Services**
-|KEYSTONE|Identity service
+|KEYSTONE|Identity service|Core|
 |PLACEMENT|Placement service
 |GLANCE|Image service
-|BARBICAN|Key management
+|BARBICAN|Key management|Core|
 |**Orchestration**
 |HEAT|Orchestration|Core|
 |SENLIN|Clustering service
@@ -52,7 +52,7 @@ An OpenStack deployment contains a number of components providing APIs to access
 |**API Proxies**|
 |EC2API|EC2 API proxy|
 |**Web frontends**|
-|HORIZON|Dashboard|
+|HORIZON|Dashboard|Core|
 |SKYLINE|Next generation dashboard (tech preview)|
 
 

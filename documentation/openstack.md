@@ -78,16 +78,19 @@ An OpenStack deployment contains a number of components providing APIs to access
 
 -------------------------------------------
 ## Devstack installation
-1. spawn VM and [Instruction](https://docs.openstack.org/devstack/latest/#:~:text=DevStack%20is%20a%20series%20of,the%20OpenStack%20project's%20functional%20testing.)
-2. for our VM run `sudo apt-get install --reinstall ca-certificates` since to get git to Work [REF](https://stackoverflow.com/questions/35821245/github-server-certificate-verification-failed)
-3. `git clone https://opendev.org/openstack/devstack` and follow above Instruction.
-4. `pip install --upgrade pip` to pip-failed-building-wheel
-5. 
+1. spawn VM update and upgrade and [Instruction](https://docs.openstack.org/devstack/latest/#:~:text=DevStack%20is%20a%20series%20of,the%20OpenStack%20project's%20functional%20testing.)
+2. `git clone https://opendev.org/openstack/devstack` and follow above Instruction.
+
 admin
 46f0f49fc63f6330e3a3
 
+### Some issues and solutions
+1. for our VM run `sudo apt-get install --reinstall ca-certificates` since to get git to Work [REF](https://stackoverflow.com/questions/35821245/github-server-certificate-verification-failed)
+2. `pip install --upgrade pip` to pip-failed-building-wheel
+3. when restart -----> https://opendev.org/openstack/devstack/commit/9ba49cd82631ada84b8458b370ac535985d57725
 
 
+-------------------
 - [Services PDF OS 16.2](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/16.2/pdf/product_guide/red_hat_openstack_platform-16.2-product_guide-en-us.pdf)
 - [OS 13](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/pdf/product_guide/red_hat_openstack_platform-13-product_guide-en-us.pdf)
 - [Openstack.org](https://www.openstack.org/software/project-navigator/openstack-components#openstack-services)

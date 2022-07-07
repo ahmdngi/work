@@ -1,8 +1,12 @@
 Openstack Diagram
 - Presentation [HERE](https://slideplayer.com/slide/16571787/)
 - Redhat Openstack Platform RHOSP
+- [Installation Guide](https://docs.openstack.org/install-guide/index.html)
 
 ![](https://docs.openstack.org/arch-design/_images/osog_0001.png)
+
+![Conceptual Architecture](https://docs.openstack.org/install-guide/_images/openstack_kilo_conceptual_arch.png)
+![Logical Architecture](https://docs.openstack.org/install-guide/_images/openstack-arch-kilo-logical-v1.png)
 
 
 
@@ -77,7 +81,10 @@ An OpenStack deployment contains a number of components providing APIs to access
 1. spawn VM and [Instruction](https://docs.openstack.org/devstack/latest/#:~:text=DevStack%20is%20a%20series%20of,the%20OpenStack%20project's%20functional%20testing.)
 2. for our VM run `sudo apt-get install --reinstall ca-certificates` since to get git to Work [REF](https://stackoverflow.com/questions/35821245/github-server-certificate-verification-failed)
 3. `git clone https://opendev.org/openstack/devstack` and follow above Instruction.
-4. 
+4. `pip install --upgrade pip` to pip-failed-building-wheel
+5. 
+admin
+46f0f49fc63f6330e3a3
 
 
 

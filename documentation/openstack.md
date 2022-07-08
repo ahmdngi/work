@@ -80,9 +80,11 @@ An OpenStack deployment contains a number of components providing APIs to access
 ## Devstack installation
 1. spawn VM update and upgrade and [Instruction](https://docs.openstack.org/devstack/latest/#:~:text=DevStack%20is%20a%20series%20of,the%20OpenStack%20project's%20functional%20testing.)
 2. `git clone https://opendev.org/openstack/devstack` and follow above Instruction.
+3. to access the CLI you have to add ur AUTH follow [](https://docs.openstack.org/devstack/latest/configuration.html#openrc)
+    - also u can download the project opensrack rc file from the UI and run it on server 
 
 admin
-46f0f49fc63f6330e3a3
+ahnasr
 
 ### Some issues and solutions
 1. for our VM run `sudo apt-get install --reinstall ca-certificates` since to get git to Work [REF](https://stackoverflow.com/questions/35821245/github-server-certificate-verification-failed)

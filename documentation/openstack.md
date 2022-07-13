@@ -4,9 +4,9 @@ Openstack Diagram
 - [Installation Guide](https://docs.openstack.org/install-guide/index.html)
 
 ![](https://docs.openstack.org/arch-design/_images/osog_0001.png)
-
 ![Conceptual Architecture](https://docs.openstack.org/install-guide/_images/openstack_kilo_conceptual_arch.png)
 ![Logical Architecture](https://docs.openstack.org/install-guide/_images/openstack-arch-kilo-logical-v1.png)
+![](https://object-storage-ca-ymq-1.vexxhost.net/swift/v1/6e4619c416ff4bd19e1c087f27a43eea/www-assets-prod/openstack-map/openstack-map-v20210201.svg)
 
 
 

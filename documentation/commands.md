@@ -25,6 +25,8 @@ netstat -r
 
 - `grep -R wakeup *` >>> runs a search in the current directory in all the folders and files
 
+- `sudo su -` enter sudo Mode >>> hen `echo "ubuntu ALL=(ALL) NOPASSWD=ALL">/etc/sudoers.d/ubuntu` to give permission to "ubuntu" user
+
 
 -----
 ##### Git commands

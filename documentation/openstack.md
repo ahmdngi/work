@@ -2,6 +2,7 @@ Openstack Diagram
 - Presentation [HERE](https://slideplayer.com/slide/16571787/)
 - Redhat Openstack Platform RHOSP
 - [Installation Guide](https://docs.openstack.org/install-guide/index.html)
+- latest guide for yoga [HERE](https://docs.openstack.org/yoga/admin/)
 
 ![](https://docs.openstack.org/arch-design/_images/osog_0001.png)
 ![Conceptual Architecture](https://docs.openstack.org/install-guide/_images/openstack_kilo_conceptual_arch.png)
@@ -9,6 +10,9 @@ Openstack Diagram
 ![](https://object-storage-ca-ymq-1.vexxhost.net/swift/v1/6e4619c416ff4bd19e1c087f27a43eea/www-assets-prod/openstack-map/openstack-map-v20210201.svg)
 
 
+
+**OVERVIEW**
+OpenStack provides an Infrastructure-as-a-Service (IaaS) solution through a variety of complementary services. Each service offers an Application Programming Interface (API) that facilitates this integration.
 
 **OpenStack Services:** 
 An OpenStack deployment contains a number of components providing APIs to access infrastructure resources. This page lists the various services that can be deployed to provide such resources to cloud end users.

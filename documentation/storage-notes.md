@@ -18,7 +18,7 @@
       - full: all data is backed up.
       - incremental: only backs up the data change since the last incremental or full backup.
       - differential: data that has been changed since the last full backup.
-
+---
 ###### **Good Videos**
    - [file systems](https://www.youtube.com/watch?v=KN8YgJnShPM)
    -

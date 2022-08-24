@@ -3,6 +3,8 @@
 - DAS: direct attached storage. 
 - NFS: network file system.
 - GPFS: general parallel file system
+- SMB: server message block. [more](is a client-server interaction protocol where clients request a file, and the server provides it to the client. It is now a  Windows-based network that gives users to create, modify and delete the shared files, folders, printers within the network.)
+- S3: Amazon simple storage service [more](is an object storage service offering industry-leading scalability, data availability, security, and performance.)
 - RAID: redundant array of independant disks
        <details><summary>**RAID TYPES**</summary>
     - RAID 0: striping just spread into two seperate disks

@@ -1,3 +1,4 @@
+Important acronyms 
 - NAS: network attached storage.
 - SAN: storage area network.
 - DAS: direct attached storage. 
@@ -5,6 +6,7 @@
 - GPFS: general parallel file system
 - SMB: server message block. <details><summary>more</summary>is a client-server interaction protocol where clients request a file, and the server provides it to the client. It is now a  Windows-based network that gives users to create, modify and delete the shared files, folders, printers within the network.</details>
 - S3: Amazon simple storage service <details><summary>more</summary>i(is an object storage service offering industry-leading scalability, data availability, security, and performance.</details>
+- NTFS: new technology file system and it is being used in windows 
 - RAID: redundant array of independant disks
        <details><summary>**RAID TYPES**</summary>
     - RAID 0: striping just spread into two seperate disks
@@ -18,6 +20,12 @@
       - full: all data is backed up.
       - incremental: only backs up the data change since the last incremental or full backup.
       - differential: data that has been changed since the last full backup.
+---
+GPFS:
+- failure groups
+
+
+
 ---
 ###### **Good Videos**
    - [file systems](https://www.youtube.com/watch?v=KN8YgJnShPM)

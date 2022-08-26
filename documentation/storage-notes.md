@@ -4,6 +4,7 @@ Important acronyms
 - DAS: direct attached storage. 
 - NFS: network file system.
 - GPFS: general parallel file system
+- JBOD: just bunch of disks
 - SMB: server message block. <details><summary>more</summary>is a client-server interaction protocol where clients request a file, and the server provides it to the client. It is now a  Windows-based network that gives users to create, modify and delete the shared files, folders, printers within the network.</details>
 - S3: Amazon simple storage service <details><summary>more</summary>i(is an object storage service offering industry-leading scalability, data availability, security, and performance.</details>
 - NTFS: new technology file system and it is being used in windows 
@@ -23,7 +24,9 @@ Important acronyms
 ---
 GPFS:
 - failure groups
-
+- HPC uses lenovo DSS-G (Distributed Storage Solution for IBM Spectrum Scale)
+- DSS-G operated through xCAT(Extreme Cloud Admin Toolkit) to do the following:
+   - setup DSS-G nodes, client nodes, DSS-G commands
 
 
 ---

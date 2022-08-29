@@ -22,12 +22,12 @@ Important acronyms
       - incremental: only backs up the data change since the last incremental or full backup.
       - differential: data that has been changed since the last full backup.
 ---
-GPFS:
+GPFS: [guide](https://www.ibm.com/docs/en/gpfs/4.1.0.4?topic=SSFKCN_4.1.0.4/gpfs4104_content.html)
 - failure groups
 - HPC uses lenovo DSS-G (Distributed Storage Solution for IBM Spectrum Scale)
 - DSS-G operated through xCAT(Extreme Cloud Admin Toolkit) to do the following:
    - setup DSS-G nodes, client nodes, DSS-G commands
-
+- commands [here](https://www.ibm.com/docs/en/gpfs/4.1.0.4?topic=reference-gpfs-commands)
 
 ---
 ###### **Good Videos**

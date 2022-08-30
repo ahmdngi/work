@@ -30,10 +30,15 @@ GPFS: [guide](https://www.ibm.com/docs/en/gpfs/4.1.0.4?topic=SSFKCN_4.1.0.4/gpfs
    - setup DSS-G nodes, client nodes, DSS-G commands
 - commands [here](https://www.ibm.com/docs/en/gpfs/4.1.0.4?topic=reference-gpfs-commands)
 
+---
+###### **SSH sequence**
+- nas machines : base > hpc > nas-0
+- ocean: xcat > ocean1 
+------
+##### storage commands
+- rsync  
+https://www.youtube.com/watch?v=qE77MbDnljA
 
-SSH squence
-nas machines : base > hpc > nas-0
-ocean: xcat > ocean1 
 ---
 ###### **Good Videos**
    - [file systems](https://www.youtube.com/watch?v=KN8YgJnShPM)

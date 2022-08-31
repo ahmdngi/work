@@ -37,7 +37,8 @@ GPFS: [guide](https://www.ibm.com/docs/en/gpfs/4.1.0.4?topic=SSFKCN_4.1.0.4/gpfs
 ------
 ##### storage commands
 - rsync  
-https://www.youtube.com/watch?v=qE77MbDnljA
+https://www.youtube.com/watch?v=qE77MbDnljAz
+https://www.spectrumscaleug.org/presentations/
 
 ---
 ###### **Good Videos**
